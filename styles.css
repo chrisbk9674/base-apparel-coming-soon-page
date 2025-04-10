@@ -158,7 +158,7 @@ p.launch-message-description {
   padding: 0px 0px 0px 32px;
   font-size: 16px;
   background: transparent;
-  color: #e4d0d1;
+  color: #3a3434;
 }
 
 .email-signup-button {
@@ -210,7 +210,7 @@ p.launch-message-description {
 }
 
 .email-error-message {
-  color: #f96464;
+  color: #f96262;
   font-size: 12px;
   font-weight: 400;
   margin-top: 0px;
