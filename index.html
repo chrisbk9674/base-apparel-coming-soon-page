@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Base Apparel Coming Soon Page</title>
+  </head>
+  <body>
+    <main class="website-launch-container">
+      <section class="left-content-layout">
+        <a href="/" class="brand-logo-wrapper">
+          <img
+            src="images/logo.svg"
+            alt="Base Apparel logo"
+            class="brand-logo"
+          />
+        </a>
+        <figure class="mobile-launch-hero-image-wrapper">
+          <img
+            src="images/hero-mobile.jpg"
+            alt="Hero image for mobile size devices"
+            class="hero-image"
+          />
+        </figure>
+        <section class="launch-message">
+          <h2 class="launch-message-title"><span>WE'RE </span>COMING SOON</h2>
+          <p class="launch-message-description">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+        </section>
+        <form class="email-signup" action="#" method="post" novalidate>
+          <label for="email" class="visually-hidden">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="email-signup-input"
+            placeholder="Email Address"
+            required
+          />
+          <img
+            src="images/icon-error.svg"
+            alt="Error icon"
+            class="email-error-icon"
+            id="email-error-icon"
+            style="display: none"
+          />
+          <button
+            type="submit"
+            class="email-signup-button"
+            aria-label="Submit email"
+          >
+            <span class="email-signup-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="18"
+                viewBox="0 0 12 18"
+                fill="none"
+              >
+                <path
+                  d="M1 1L10 9L1 17"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </button>
+        </form>
+        <div class="email-error" id="email-error">
+          <p class="email-error-message">Please provide a valid email</p>
+        </div>
+      </section>
+      <section class="right-content-layout">
+        <figure class="hero-image">
+          <img
+            src="images/hero-desktop.jpg"
+            class="hero-image-model"
+            alt="Model wearing peach button-up shirt from Base Apparel"
+            aria-label="Model wearing Base Apparel clothing"
+          />
+        </figure>
+      </section>
+    </main>
+    <script>
+      const form = document.querySelector(".email-signup");
+      const input = document.querySelector(".email-signup-input");
+      const error = document.getElementById("email-error");
+      const icon = document.getElementById("email-error-icon");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = input.value.trim();
+        const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+        if (!isValid) {
+          form.classList.add("invalid");
+          error.style.display = "flex";
+          icon.style.display = "block";
+        } else {
+          form.classList.remove("invalid");
+          error.style.display = "none";
+          icon.style.display = "none";
+
+          console.log("Form submitted with:", email);
+        }
+      });
+
+      input.addEventListener("input", function () {
+        form.classList.remove("invalid");
+        error.style.display = "none";
+        icon.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

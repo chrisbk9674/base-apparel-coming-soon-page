@@ -1,0 +1,350 @@
+html {
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffdfe;
+  background-color: #2e2e2e;
+}
+
+/* =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ */
+
+.website-launch-container {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.mobile-launch-hero-image-wrapper {
+  display: none;
+}
+
+.left-content-layout {
+  display: flex;
+  flex-direction: column;
+  width: 57.6%;
+  padding: 66px 0px 92px 165px;
+  background-color: #fffdfe;
+  background-image: url("images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.right-content-layout {
+  width: 42.4%;
+}
+
+figure.hero-image {
+  width: 100%;
+  height: 100%;
+}
+
+figure.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+a.brand-logo-wrapper {
+  margin-bottom: 138px;
+}
+
+h2 {
+  line-height: 1.2;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: 0.27em;
+  margin-bottom: 19px;
+  color: #443b3c;
+}
+
+span {
+  font-weight: 300;
+  color: #c69b9c;
+}
+
+.launch-message {
+  min-width: 428px;
+  max-width: 450px;
+}
+
+p.launch-message-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0;
+  margin-bottom: 50px;
+  color: #bfa0a5;
+}
+
+/* Email error notifications */
+
+.email-signup {
+  width: 444px;
+  height: 56px;
+  display: flex;
+  border: 1px solid #d9cacd;
+  border-radius: 28px;
+  background: #fff;
+  position: relative;
+}
+
+.email-signup-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0px 0px 0px 32px;
+  font-size: 16px;
+  background: transparent;
+  color: #e4d0d1;
+}
+
+.email-signup-button {
+  width: 100px;
+  height: 56px;
+  background: linear-gradient(to right, #f8b6b6, #ee8d8d);
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(242, 133, 133, 0.55);
+}
+
+.email-signup-button:active {
+  background: linear-gradient(to right, #e69c9c, #d76e6e);
+  box-shadow: 0 4px 10px rgba(200, 80, 80, 0.4);
+  transform: scale(0.97);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.email-error {
+  display: none;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.email-error-icon {
+  position: absolute;
+  right: 116px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.email-error-message {
+  color: #f96464;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 0px;
+  padding-left: 32px;
+}
+
+.email-signup.invalid {
+  border: 2px solid #f96464;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 1164px) {
+  .website-launch-container {
+    height: auto;
+  }
+
+  .left-content-layout {
+    padding: 66px 0px 64px 32px;
+    width: 50%;
+  }
+
+  .right-content-layout {
+    width: 50%;
+  }
+
+  figure.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+    display: block;
+  }
+}
+
+@media (max-width: 1000px) {
+  .website-launch-container {
+    height: auto;
+  }
+
+  a.brand-logo-wrapper {
+    margin-bottom: 72px;
+  }
+
+  .mobile-launch-hero-image-wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-launch-hero-image-wrapper img {
+    width: 80%;
+  }
+  .right-content-layout {
+    display: none;
+  }
+  .left-content-layout {
+    width: 100%;
+    padding: 66px 64px 80px 64px;
+  }
+
+  .launch-message {
+    width: 100%;
+    margin-top: 66px;
+    min-width: unset;
+    max-width: unset;
+  }
+
+  p.launch-message-description {
+    width: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  .mobile-launch-hero-image-wrapper img {
+    width: 100%;
+  }
+
+  h2 {
+    width: 340px;
+    line-height: 1.2;
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: 0.27em;
+    text-align: center;
+    margin: 0 auto 12px auto;
+  }
+
+  p.launch-message-description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0;
+    margin: 0 auto 33px auto;
+    text-align: center;
+    width: 300px;
+  }
+
+  .email-signup {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .left-content-layout {
+    width: 100%;
+    padding: 20px 0px 92px 0px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  a.brand-logo-wrapper {
+    margin-bottom: 32px;
+    margin-left: 32px;
+  }
+
+  .email-signup {
+    width: 90%;
+    height: 48px;
+  }
+
+  .email-signup-input {
+    font-size: 14px;
+    background: transparent;
+  }
+
+  .email-signup-button {
+    width: 64px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 425px) {
+  .launch-message-title {
+    width: 100%;
+  }
+}
