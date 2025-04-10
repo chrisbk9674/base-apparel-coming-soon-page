@@ -211,8 +211,10 @@ p.launch-message-description {
 
 .email-error-message {
   color: #f96262;
-  font-size: 12px;
-  font-weight: 400;
+  font-weight: 400; /* Regular */
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.04em;
   margin-top: 0px;
   padding-left: 32px;
 }
