@@ -1,4 +1,4 @@
-# 🌟 Base Apparel Coming Soon Page – Frontend Mentor Challenge\*\*
+# 🌟 Fully Responsive Base Apparel Coming Soon Page\*\*
 
 <p align="center">
   <img src="design/desktop-design.jpg" alt="Base Apparel Coming Soon Page" width="50%">
